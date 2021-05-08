@@ -75,6 +75,9 @@ public class SClient {
                             theClient.name = received.content.toString();
                             theClient.pairThread.start();
                             break;
+                        case Loc:
+                            Server.Send(theClient.rival, received);
+                            break;
                         case Disconnect:
                             break;
                         case Text:
